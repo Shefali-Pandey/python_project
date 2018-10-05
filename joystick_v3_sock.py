@@ -2,14 +2,12 @@ import pygame
 import socket
 import time
 import math 
-
 s=socket.socket()
 host='192.168.0.21'
 port=8087
 s.bind((host,port))
 s.listen(5)
 c,addr = s.accept()
-
 pygame.init()
 done = False
 clock = pygame.time.Clock()
@@ -21,7 +19,6 @@ button1=0
 button2=0
 button3=0
 button4=0
-
 # -------- Main Program Loop -----------
 time.sleep(10)
 print("Ready to start")
@@ -29,7 +26,7 @@ while not done:
     startingtime=time.time()
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            done = True
+            done = False
 
     
     
